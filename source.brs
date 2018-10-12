@@ -30,7 +30,6 @@ sub main()
             for ind = 0 to 45 step +1
                 text = Rand(1).toStr()
                 x = ind * font.getMaxAdvance()
-                print(x)
                 s.DrawText(text,x,i[ind],&h00FF00FF, font)
                 s.finish()
       
