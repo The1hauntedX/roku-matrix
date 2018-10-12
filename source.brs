@@ -29,7 +29,8 @@ sub main()
             
             for ind = 0 to 45 step +1
                 text = Rand(1).toStr()
-                x = 45 * ind
+                x = ind * font.getMaxAdvance()
+                print(x)
                 s.DrawText(text,x,i[ind],&h00FF00FF, font)
                 s.finish()
       
@@ -37,7 +38,7 @@ sub main()
                         i[ind] = 0
                         
                         else 
-                            i[ind] = i[ind] + 35
+                            i[ind] = i[ind] + font.getAscent()
                             
                 endif
             end for
@@ -54,4 +55,3 @@ Function Rand(length As Integer) As String
     Next
     Return str
 End Function
-  
